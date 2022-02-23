@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
 </head>
 <body>
- 
+
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-6">
@@ -18,7 +18,6 @@
                         <div class="card-body">
                             <h3 class="text-center">Formulir Pendataan Kesehatan Mahasiswa ITS</h3>
                             <br/>
-
                             {{-- @if (count($errors) > 0)
                             <div class="alert alert-danger">
                                 <ul>

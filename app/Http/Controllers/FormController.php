@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 
 use Illuminate\Support\Facades\Validator;
 
+use Alert;
+
 class FormController extends Controller
 {
     public function input()
@@ -15,6 +17,7 @@ class FormController extends Controller
  
     public function proses(Request $request)
     {
+        Alert::success('Submit Berhasil!', 'Terima kasih sudah mengisi form kesehatan!');
         $this->validate($request,[
             'nama' => ['required', 'min:6', 'max:20'],
             'nrp' => ['required','min:10','numeric'],
