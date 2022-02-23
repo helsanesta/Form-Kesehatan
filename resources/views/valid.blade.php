@@ -14,7 +14,7 @@
         <div class="row justify-content-center">
             <div class="col-lg-6">
                 <div class="card mt-5">
-                    <div class="card-body">
+                    <div class="card-body" style="background-color:darkcyan">
                         <h3>Formulir Pendataan Kesehatan Mahasiswa ITS</h3>
                         <h3 class="my-4">Data Yang Di Input : </h3>
 

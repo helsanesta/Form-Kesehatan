@@ -10,12 +10,11 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
 </head>
 <body>
-
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-6">
                     <div class="card mt-5">
-                        <div class="card-body">
+                        <div class="card-body"  style="background-color:darkcyan" >
                             <h3 class="text-center">Formulir Pendataan Kesehatan Mahasiswa ITS</h3>
                             <br/>
                             {{-- @if (count($errors) > 0)
