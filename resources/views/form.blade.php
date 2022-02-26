@@ -16,18 +16,6 @@
                     <div class="card mt-5">
                         <div class="card-body"  style="background-color:darkcyan" >
                             <h3 class="text-center">Formulir Pendataan Kesehatan Mahasiswa ITS</h3>
-                            <br/>
-                            {{-- @if (count($errors) > 0)
-                            <div class="alert alert-danger">
-                                <ul>
-                                    @foreach ($errors->all() as $error)
-                                        <li>{{ $error }}</li>
-                                    @endforeach
-                                </ul>
-                            </div>
-                            @endif --}}
- 
-                            <br/>
                               <!-- form validasi -->
                               <form action="/valid" method="post" enctype="multipart/form-data">
                                 {{ csrf_field() }}
@@ -36,7 +24,7 @@
                                             <input class="form-control" type="text" name="nama" value="{{ old('nama') }}" class="@error('nama') is-invalid @enderror">
                                             @error('nama')
                                                        <div class="alert alert-danger">{{ $message }}</div>
-                                               @enderror
+                                            @enderror
                                         </div>
                                         <div class="form-group">
                                                <label for="nrp">NRP</label>
@@ -75,7 +63,7 @@
                                         </div>
                                         <div class="form-group">
                                             <label for="foto">KTM</label>
-                                            <input type="file" class="form-control-file" id="ktm" name="ktm" value="{{ old('ktm') }}" accept= "image/png, image/jpeg, image/jpg" class="@error('ktm') is-invalid @enderror">
+                                            <input type="file" class="form-control-file" id="ktm" name="ktm" value="{{ old('ktm') }}" class="@error('ktm') is-invalid @enderror">
                                             @error('ktm')
                                                        <div class="alert alert-danger">{{ $message }}</div>
                                             @enderror

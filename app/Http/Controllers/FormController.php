@@ -25,12 +25,11 @@ class FormController extends Controller
             'jeniskelamin' => ['required', 'alpha', 'max:1'],
             'tinggibadan' => ['required', 'numeric'],
             'beratbadan' => ['required', 'numeric'],
-            # \request ()->validate(['ktm' => 'mimes:jpg,jpeg,png']),
-            'ktm' => ['required']
+            'ktm' => ['required', 'image', 'max:2048', 'mimes:jpg,jpeg,png']
        ]);
-    //    $validator = Validator::make($request->all(), [
-    //     'ktm' => 'max:2000', //2MB 
-    //     ]);
+        $validator = Validator::make($request->all(), [
+        'ktm' => 'max:2048', //2MB 
+        ]);
         $foto_link = $this->saveFoto( $request, 1 );
         $request->ktm = $foto_link;
         return view('valid',['data' => $request]);
@@ -40,7 +39,7 @@ class FormController extends Controller
     {
         return view('form');
     }
-    
+
     public function saveFoto(Request $request, $id)
     {
         $foto = $request->ktm; // typedata : file
