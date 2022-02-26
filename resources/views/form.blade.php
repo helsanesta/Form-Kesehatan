@@ -9,12 +9,12 @@
     <!-- bootstrap -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
 </head>
-<body>
-        <div class="container">
+<body  style="background-color: currentColor">
+        <div class="container" style="color: white">
             <div class="row justify-content-center">
                 <div class="col-lg-6">
-                    <div class="card mt-5">
-                        <div class="card-body"  style="background-color:darkcyan" >
+                    <div class="card mt-5" style="font-size: 15pt; font-weight:bold">
+                        <div class="card-body"  style="background-color:dimgray">
                             <h3 class="text-center">Formulir Pendataan Kesehatan Mahasiswa ITS</h3>
                               <!-- form validasi -->
                               <form action="/valid" method="post" enctype="multipart/form-data">
@@ -69,7 +69,7 @@
                                             @enderror
                                         </div>
                                          <div class="form-group">
-                                               <input class="btn btn-primary" type="submit" value="Valid">
+                                               <input class="btn btn-primary" type="submit" value="Valid" style="padding: 10px 24px; font-size:14pt;">
                                          </div>
                                 </form>
                         </div>
