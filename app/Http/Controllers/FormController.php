@@ -27,9 +27,6 @@ class FormController extends Controller
             'beratbadan' => ['required', 'numeric'],
             'ktm' => ['required', 'image', 'max:2048', 'mimes:jpg,jpeg,png']
        ]);
-        $validator = Validator::make($request->all(), [
-        'ktm' => 'max:2048', //2MB 
-        ]);
         $foto_link = $this->saveFoto( $request, 1 );
         $request->ktm = $foto_link;
         return view('valid',['data' => $request]);
@@ -42,13 +39,13 @@ class FormController extends Controller
 
     public function saveFoto(Request $request, $id)
     {
-        $foto = $request->ktm; // typedata : file
-        $foto_name = ''; // typedata : string
+        $foto = $request->ktm; 
+        $foto_name = ''; 
         if ($foto !== NULL) {
-            $foto_name = 'foto' . '-' . $id . "." . $foto->extension();; // typedata : string
-            $foto_name = str_replace(' ', '-', strtolower($foto_name)); // typedata : string
-            $foto->storeAs(null, $foto_name, ['disk' => 'public']); // memanggil function untuk menaruh file di storage
+            $foto_name = 'foto'. $id . "." . $foto->extension();
+            $foto_name = str_replace(' ', '-', strtolower($foto_name)); 
+            $foto->storeAs(null, $foto_name, ['disk' => 'public']); 
         }
-        return asset('storage') . '/' . $foto_name; // me return path/to/file.ext
+        return asset('storage') . '/' . $foto_name; 
     }
 }
