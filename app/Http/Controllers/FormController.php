@@ -24,17 +24,12 @@ class FormController extends Controller
             'usia' => ['required', 'numeric'],
             'jeniskelamin' => ['required', 'alpha', 'max:1'],
             'tinggibadan' => ['required', 'numeric'],
-            'beratbadan' => ['required', 'numeric'],
+            'beratbadan' => ['required', 'numeric', 'min:2.50', 'max:99.99'],
             'ktm' => ['required', 'image', 'max:2048', 'mimes:jpg,jpeg,png']
        ]);
         $foto_link = $this->saveFoto( $request, 1 );
         $request->ktm = $foto_link;
         return view('valid',['data' => $request]);
-    }
-
-    public function create()
-    {
-        return view('form');
     }
 
     public function saveFoto(Request $request, $id)

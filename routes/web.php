@@ -2,7 +2,6 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\FormController;
-use App\Http\Controllers\UploadController;
 
 /*
 |--------------------------------------------------------------------------
